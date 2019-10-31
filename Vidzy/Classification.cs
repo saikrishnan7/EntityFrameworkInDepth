@@ -7,17 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DBFirst
+namespace Vidzy
 {
     using System;
     
-    public partial class GetCourses_Result
+    public enum Classification : byte
     {
-        public int CourseID { get; set; }
-        public int AuthorID { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public short FullPrice { get; set; }
-        public string Level { get; set; }
+        Silver = 1,
+        Gold = 2,
+        Platinum = 3
     }
 }

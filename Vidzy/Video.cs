@@ -7,17 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DBFirst
+namespace Vidzy
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class GetCourses_Result
+    public partial class Video
     {
-        public int CourseID { get; set; }
-        public int AuthorID { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public short FullPrice { get; set; }
-        public string Level { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public System.DateTime ReleaseDate { get; set; }
+        public byte GenreId { get; set; }
+        public Classification Classification { get; set; }
+    
+        public virtual Genre Genre { get; set; }
     }
 }

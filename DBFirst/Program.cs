@@ -10,6 +10,14 @@ namespace DBFirst
     {
         static void Main(string[] args)
         {
+            var dbContext = new PlutoEntities();
+            dbContext.GetAuthorCourses(null);
+            var courses = dbContext.GetCourses();
+            courses.ToList().ForEach(c => Console.WriteLine(c.Title));
+            var course = new Course
+            {
+                Level = CourseLevel.Beginner
+            };
         }
     }
 }
